@@ -41,7 +41,7 @@ for i in range(1, 1021):
 
     name = soup.find(class_="fHibz")
     if name is None:
-        print("pizdec")
+        print("No name")
     else:
         name = name.text
     num_reviews = soup.find(class_="eBTWs")
@@ -79,13 +79,13 @@ for i in range(1, 1021):
     details = soup.find_all(class_="bKBJS Me enBrh")
     mail = details[1].find("a")
     if mail is None:
-        print("Почты нема")
+        print("Почты нет")
     else:
         mail = mail.get("href")
         # print(mail)
     ratings = soup.find_all(class_="cGQpb")
     if not ratings:
-        print("asshole")
+        print("no rating")
     else:
         if len(ratings) < 1:
             print("rating is less than 1")
