@@ -20,11 +20,7 @@ for i in range(5*915):
 # for i in range(4,915*5,5):
 
     # data_lrn[i] = 20*(data_lrn[i]**0.5)*(2.72**(1100/(data_lrn[i] + 1100)))
-    # data_lrn[i] = 20 * (data_lrn[i] ** 0.5) * (2.72 ** (1100 / (data_lrn[i] + 1100)))
 
-    # data_lrn[i] = data_lrn[i]*(2.72**(-150/(data_lrn[i]+150)))+150
-    # data_lrn[i] = data_lrn[i]*(2.72**(0.0009*(900 - data_lrn[i])))+200
-    # data_lrn[i] = data_lrn[i]*(1.001**(1100 - data_lrn[i]))
 temp = []
 data_test = []
 for i in range(915,1015):
@@ -35,7 +31,6 @@ for i in range(5*100):
     data_test[i] = int(data_test[i])
 
 # for i in range(4,5*100,5):
-#     data_test[i] = data_test[i]*2
 #     data_test[i] = data_test[i]*(2.72**(-data_test[i]))
 
 
@@ -72,22 +67,8 @@ for i in range(100):
     res.append(y_pred[i])
 for i in range(100):
     res[i] = round(res[i], 1)
-    res[i] = round(res[i]- 0.139,1)
+    res[i] = round(res[i]- 0.239,1)
 
-sum = 0
-for i in range(100):
-    sum +=res[i]
-dif = 0
-for i in range(100):
-    print("Real:",result_test[i]," Predicted:", res[i], "Differnece:", round(result_test[i] - res[i],1))
-    dif += round(result_test[i] - res[i],1)
-print(dif/100)
 
-# y = numpy.data_lrn([4.8, 5, 5, 4.6, 5, 4.5, 4.6, 4.8, 4.8, 4.8])
-#
-# model = LinearRegression()
-# model.fit(x,y)
-#
-# result = model.score(x,y)
-# y_predict = model.predict(x)
-# print("Predicted rating is:", y_predict, sep=' ')
+
+
